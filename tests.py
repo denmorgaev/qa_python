@@ -115,7 +115,7 @@ class TestBooksCollector:
         collection.delete_book_from_favorites(first_book)
         assert len(collection.get_list_of_favorites_books()) == 0
 
-    '''Негативная проверка удаления не добавленной книги в favorites'''
+    '''Негативная проверка удаления не добавленной книги в избранное'''
 
     def test_delete_book_from_favorites_missing_book_not_deleted(self, collection):
         first_book = 'Хоббит'
@@ -124,4 +124,4 @@ class TestBooksCollector:
         collection.add_book_in_favorites(first_book)
         collection.delete_book_from_favorites(second_book)
         favorites = collection.get_list_of_favorites_books()
-        assert len(favorites) == 1 and favorites[0] == first_bookласса BooksCollector()
+        assert len(favorites) == 1 and favorites[0] == first_book
